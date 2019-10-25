@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: black;"
+            xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="iBUS.resources.Controllers.CustomerController">
+
+    <top>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="88.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="468.0" minWidth="10.0" prefWidth="468.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Button mnemonicParsing="false" onAction="#Home" style="-fx-background-color: black;">
+                <graphic>
+                    <ImageView fitHeight="26.0" fitWidth="29.0">
+                        <Image url="@../../Images/logout.jpg"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Label fx:id="name" style="-fx-text-fill: yellow;" text="Hello : Customer" GridPane.columnIndex="2"
+                   GridPane.halignment="RIGHT">
+                <font>
+                    <Font size="14.0"/>
+                </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1"
+                  GridPane.halignment="CENTER">
+
+                <ToggleButton fx:id="book" mnemonicParsing="false" onAction="#Scenes" prefWidth="10000.0"
+                              style="-fx-background-radius: 10;" text="Book"/>
+                <ToggleButton fx:id="info" mnemonicParsing="false" onAction="#Scenes" prefWidth="10000.0"
+                              style="-fx-background-radius: 10;" text="Bus Info"/>
+                <ToggleButton fx:id="history" mnemonicParsing="false" onAction="#Scenes" prefWidth="10000.0"
+                              style="-fx-background-radius: 10;" text="History"/>
+                <ToggleButton fx:id="profile" mnemonicParsing="false" onAction="#Scenes" prefWidth="10000.0"
+                              style="-fx-background-radius: 10;" text="Profile"/>
+                <ToggleButton fx:id="edit" mnemonicParsing="false" onAction="#Scenes" prefWidth="10000.0"
+                              style="-fx-background-radius: 10;" text="Edit"/>
+                <ToggleButton fx:id="delete" mnemonicParsing="false" onAction="#Scenes" prefWidth="10000.0"
+                              style="-fx-background-radius: 10;" text="Delete"/>
+            </HBox>
+        </GridPane>
+    </top>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <center>
+        <BorderPane fx:id="changable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

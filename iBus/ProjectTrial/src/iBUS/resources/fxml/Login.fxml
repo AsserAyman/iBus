@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" prefHeight="650" prefWidth="1000" style="-fx-background-color: black;  " xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iBUS.resources.Controllers.LoginController">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+    <top>
+        <GridPane prefHeight="61.0" prefWidth="972.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                <Button fx:id="face" mnemonicParsing="false" onAction="#onFaceClicked" prefHeight="36.0" prefWidth="46.0" style="-fx-background-color: black;">
+                    <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="29.0">
+                            <Image url="@../../Images/face.jpg" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="twt" mnemonicParsing="false" onAction="#onTWTClicked" style="-fx-background-color: black;">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="28.0">
+                            <Image url="@../../Images/tw.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="inst" mnemonicParsing="false" onAction="#onInstClikced" style="-fx-background-color: black;">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="31.0">
+                            <Image url="@../../Images/insta.jpg" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onPhoneClicked" style="-fx-background-color: black;">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0">
+                            <Image url="@../../Images/phone.jpg" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </GridPane>
+    </top>
+    <bottom>
+        <GridPane maxHeight="500.0" maxWidth="900.0" prefHeight="486.0" prefWidth="892.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="486.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER" prefHeight="367.0" prefWidth="901.0" spacing="5.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                    <children>
+                        <TextField fx:id="username" alignment="CENTER" maxWidth="300.0" prefHeight="25.0" prefWidth="508.0" promptText="Username" style="-fx-background-radius: 10;" />
+                        <PasswordField fx:id="pass" alignment="CENTER" maxWidth="300.0" promptText="Password" style="-fx-background-radius: 10;" />
+                        <HBox maxHeight="25.0" maxWidth="300.0" prefHeight="100.0" prefWidth="901.0" spacing="15.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="108.0" style="-fx-background-radius: 10;" text="Login" />
+                                <Hyperlink lineSpacing="10.0" onAction="#goToForgotPass" style="-fx-text-fill: yellow;" text="Forgot Password ?" />
+                            </children>
+                        </HBox>
+                        <HBox maxHeight="25.0" maxWidth="300.0" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Hyperlink onAction="#signUP" prefHeight="23.0" prefWidth="293.0" style="-fx-text-fill: yellow;" text="Have No Account yet? Sign Up Now">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Hyperlink>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <ImageView fitHeight="215.0" fitWidth="416.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                    <image>
+                        <Image url="@../../Images/ibusfinal2.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iBUS.resources.Controllers.profileController">
+    <top>
+        <Label style="-fx-text-fill: yellow;" text="Personal Information" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+    </top>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="ID :" GridPane.halignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="id" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Name :" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="name" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="username" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Username :" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Password :" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Gender :" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="E-mail :" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="password" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="gender" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="email" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Phone :" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Age :" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Security Question :" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" style="-fx-text-fill: yellow;" text="Answer :" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="phone" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField fx:id="age" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="3" />
+                <TextField fx:id="security" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <TextField fx:id="answer" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Label fx:id="cardLabel" alignment="CENTER" style="-fx-text-fill: yellow;" text="Credit Card Number :" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="secNumberLabel" alignment="CENTER" style="-fx-text-fill: yellow;" text="Security Number :" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="balanceLabel" alignment="CENTER" style="-fx-text-fill: yellow;" text="Balance :" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="credit" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <TextField fx:id="secNumber" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <TextField fx:id="balance" alignment="CENTER" editable="false" style="-fx-background-radius: 10;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+            </padding>
+        </GridPane>
+    </center>
+</BorderPane>

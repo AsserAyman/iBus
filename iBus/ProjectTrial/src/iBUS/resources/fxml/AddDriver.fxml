@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="500.0" prefWidth="800.0"
+            style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            fx:controller="iBUS.resources.Controllers.AddDriverController">
+
+    <center>
+        <GridPane vgap="20.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0"/>
+            </BorderPane.margin>
+            <children>
+                <Label style="-fx-text-fill: yellow;" text="Driver Information :">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+
+                <TextField fx:id="ID" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="25.0"
+                           prefWidth="209.0" promptText="ID" style="-fx-background-radius: 10;" GridPane.rowIndex="1"/>
+                <TextField fx:id="username" alignment="CENTER" layoutX="25.0" layoutY="180.0" maxWidth="200.0"
+                           minWidth="200.0" prefHeight="25.0" prefWidth="209.0" promptText="Username"
+                           style="-fx-background-radius: 10;" GridPane.rowIndex="3"/>
+                <PasswordField fx:id="Pass" alignment="CENTER" layoutX="25.0" layoutY="222.0" maxWidth="200.0"
+                               minWidth="200.0" prefHeight="25.0" prefWidth="209.0" promptText="Password"
+                               style="-fx-background-radius: 10;" GridPane.rowIndex="4"/>
+                <PasswordField fx:id="rePass" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="25.0"
+                               prefWidth="209.0" promptText="Re-Enter Password" style="-fx-background-radius: 10;"
+                               GridPane.rowIndex="5"/>
+                <TextField fx:id="email" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="25.0"
+                           prefWidth="209.0" promptText="E-Mail" style="-fx-background-radius: 10;"
+                           GridPane.rowIndex="6"/>
+                <TextField fx:id="phone" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="25.0"
+                           prefWidth="209.0" promptText="Phone Number" style="-fx-background-radius: 10;"
+                           GridPane.rowIndex="7"/>
+                <TextField fx:id="age" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="25.0"
+                           prefWidth="209.0" promptText="Age" style="-fx-background-radius: 10;" GridPane.rowIndex="8"/>
+                <HBox alignment="CENTER" maxWidth="200.0" prefHeight="37.0" prefWidth="223.0" spacing="15.0"
+                      GridPane.rowIndex="9">
+                    <RadioButton fx:id="male" style="-fx-text-fill: yellow;" text="Male"/>
+                    <RadioButton fx:id="female" style="-fx-text-fill: yellow;" text="Female"/>
+                </HBox>
+                <ComboBox fx:id="security" prefHeight="25.0" prefWidth="198.0" promptText="Security Question"
+                          style="-fx-background-radius: 10;" GridPane.rowIndex="10">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="What is the name of your first pet ?"/>
+                            <String fx:value="What is the name of your favourite teacher ?"/>
+                            <String fx:value="what is the name of favourite city ?"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <TextField fx:id="answer" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="25.0"
+                           prefWidth="209.0" promptText="Answer" style="-fx-background-radius: 10;"
+                           GridPane.rowIndex="11"/>
+                <Label style="-fx-text-fill: yellow;" text="Bus Information :" GridPane.columnIndex="1">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="plateNum" alignment="CENTER" maxWidth="200.0" prefHeight="25.0" prefWidth="249.0"
+                           promptText="Plate Number" style="-fx-background-radius: 10;" GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+                <TextField fx:id="name" alignment="CENTER" layoutX="25.0" layoutY="57.0" maxWidth="200.0"
+                           minWidth="200.0" prefHeight="25.0" prefWidth="209.0" promptText="Name"
+                           style="-fx-background-radius: 10;" GridPane.rowIndex="2"/>
+                <HBox alignment="CENTER" maxWidth="223.0" prefHeight="100.0" prefWidth="223.0" spacing="15.0"
+                      GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <RadioButton fx:id="classic" mnemonicParsing="false" style="-fx-text-fill: yellow;" text="Classic"/>
+                    <RadioButton fx:id="elite" mnemonicParsing="false" style="-fx-text-fill: yellow;" text="Elite"/>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </padding>
+        </GridPane>
+    </center>
+    <bottom>
+        <Button fx:id="signUp" mnemonicParsing="false" onAction="#isAddClicked" prefHeight="25.0" prefWidth="154.0"
+                style="-fx-background-radius: 10;" text="Add Driver" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="15.0"/>
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+</BorderPane>
